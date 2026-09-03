@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('farmaaaa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Evita que a página crie barra de rolagem */
+}
+
+.container {
+    background: rgba(15, 12, 41, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 360px; /* Largura reduzida */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    margin-left: 50px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #cedfe2;
+    text-shadow: 0 0 10px rgba(231, 240, 242, 0.905);
+}
+
+.input-box {
+    margin-bottom: 10px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    color: #ccc;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+.aura-display {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aura-display h2 {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.aura-display h1 {
+    font-size: 2rem;
+    color: #e0f2ea;
+    margin: 2px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+#ganho-por-clique {
+    font-size: 0.75rem;
+    color: #ffdd59;
+}
+
+.card-status {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-status h2 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #ff5e7e;
+}
+
+.card-status img {
+    width: 100%;
+    height: 110px; /* Imagem mais compacta */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-status p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 65, 108, 0.4);
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    box-shadow: 0 6px 16px rgba(255, 65, 108, 0.6);
+}
+
+button:active {
+    transform: scale(0.96);
+}

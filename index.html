@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Farmar Aura</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script>
+        var aura = 0
+
+        function FarmarAura() {
+            var nome = document.querySelector("#nome").value
+            var resultado = document.querySelector("#resultado")
+            var mensagem = document.querySelector("#mensagem")
+            var nivelTitulo = document.querySelector("#nivel-titulo")
+            var ganhoDisplay = document.querySelector("#ganho-por-clique")
+            var imagem = document.querySelector("#imagem-aura")
+
+            if (nome == "") {
+                alert("Ei betinha, para continuar você precisa digitar seu nome!")
+            } else {
+                var ganho = 1
+
+                if (aura < 10) {
+                    ganho = 1
+                } else if (aura < 30) {
+                    ganho = 2
+                } else if (aura < 50) {
+                    ganho = 3
+                } else if (aura < 100) {
+                    ganho = 5
+                } else {
+                    ganho = 10
+                }
+
+                aura = aura + ganho
+                resultado.innerHTML = aura
+                ganhoDisplay.innerHTML = "+" + ganho + " de Aura por clique"
+
+                // Verificação de níveis
+                if (aura < 0) {
+                    nivelTitulo.innerHTML = "Nível: Sem Aura 🗿"
+                    mensagem.innerHTML = nome + ", você ainda está começando. Melhore essa atitude!"
+                    imagem.src = "bebe.jpg"
+                } else if (aura < 67) {
+                    nivelTitulo.innerHTML = "Nível: Aprendiz 🥋"
+                    mensagem.innerHTML = "Boa, " + nome + "! Já começou a respeitar o farm."
+                    imagem.src = "idoso.jpg"
+                } else if (aura < 670) {
+                    nivelTitulo.innerHTML = "Nível: Aura Alta ✨"
+                    mensagem.innerHTML = "Respeite o " + nome + "! A presença já está ficando forte."
+                    imagem.src = "sigma boy.jpg"
+                } else if (aura < 6700) {
+                    nivelTitulo.innerHTML = "Nível: Mestre da Aura 👑"
+                    mensagem.innerHTML = "Aura pura! " + nome + " domina o ambiente totalmente!"
+                    imagem.src = "patrickk.jpg"
+                } else {
+                    nivelTitulo.innerHTML = "Nível: Aura Lendária 🚀⚡"
+                    mensagem.innerHTML = "IMPOSSÍVEL! " + nome + " atingiu o patamar absoluto de Sigma Lendário!"
+                    imagem.src = "bird.png"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Farmar Aura</h1>
+        
+        <div class="input-box">
+            <label for="nome">Qual o seu nome, Sigma?</label>
+            <input type="text" id="nome" placeholder="Digite seu nome aqui...">
+        </div>
+
+        <div class="aura-display">
+            <h2>Aura Total:</h2>
+            <h1 id="resultado">0</h1>
+            <p id="ganho-por-clique">+1 de Aura por clique</p>
+        </div>
+
+        <div class="card-status">
+            <h2 id="nivel-titulo">Nível: Sem Aura 🗿</h2>
+            <img id="imagem-aura" src="adolescente.webp">
+            <p id="mensagem">Digite seu nome e comece a farmar para sair do nível beta!</p>
+        </div>
+
+        <button onclick="FarmarAura()">Aura + Ego 🔥</button>
+    </div>
+</body>
+</html>
